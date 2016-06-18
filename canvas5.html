@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	 #canvas {
+      	border: 1px solid maroon;
+      }
+	</style>
+</head>
+<body>
+		<h1>Canvas Example</h1>
+	<canvas id="canvas" width="800" height="600">Your browser not canvas.</canvas>
+	<script>
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      
+      function ConverToRadGradus(deg) {
+      	return deg*Math.PI/180;
+      }
+      ctx.strokeStyle =  '#F7A628';
+      ctx.fillStyle = 'yellow';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(350, 100, 40, 0, ConverToRadGradus(360));
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.strokeStyle = '#F7A628';
+      ctx.fillStyle = '#fff';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(345, 95, 7, 7, ConverToRadGradus(320));
+      ctx.fill();
+      ctx.stroke();
+
+
+      
+       ctx.strokeStyle = '#F7A628';
+      ctx.fillStyle = '#fff';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(356, 95, 7, 10, ConverToRadGradus(150));
+     
+      ctx.fill();
+      ctx.stroke();
+
+
+      // ctx.strokeStyle = '';
+      ctx.fillStyle = '#222323';
+      ctx.lineWidth = 0;
+      ctx.beginPath();
+      ctx.arc(345, 95, 3, 0, ConverToRadGradus(360));
+     
+      ctx.fill();
+     // ctx.stroke();
+
+        // ctx.strokeStyle = '';
+      ctx.fillStyle = '#222323';
+      ctx.lineWidth = 0;
+      ctx.beginPath();
+      ctx.arc(356, 95, 3, 0, ConverToRadGradus(360));
+     
+      ctx.fill();
+     // ctx.stroke();
+
+
+     ctx.strokeStyle = '#000';
+      //ctx.fillStyle = '#fff';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(349, 110, 15, 19.5, ConverToRadGradus(870));
+     
+      //ctx.fill();
+      ctx.stroke();
+
+	</script>
+</body>
+</html>
