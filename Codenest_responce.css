@@ -1,0 +1,210 @@
+    @media all  and (max-width: 1584px) {
+/*моля да следите на  за следните breakpoints 1352px защото лаптопа ми е с по малък размер на екрана:*/
+
+    }
+    @media all  and (max-width: 1352px) {
+
+      div.wrapper nav ul {
+       width: 50%;
+     }
+     div.wrapper section.first article:last-of-type div p {
+       width: 100%;
+     }
+     div.wrapper section.second article:first-of-type div p {
+       width: 100%;
+     }
+     div.wrapper section.third article:last-of-type div p {
+       width: 100%;
+     }
+     div.wrapper section.four div#img_1 {
+       display: block;
+     }
+     div.wrapper section.four div#all_img img.small {
+       display: inline-block;
+       margin-right: 2em;
+     }
+     div.wrapper section.four div#all_img  img.big {
+       display: inline-block;
+       margin-right: 2em;
+       height: 364px;
+     }
+     div.wrapper section.four div#img_3 {
+       float: none;
+     }
+     div.wrapper section.four div#all_img img.small1 {
+       display: inline-block;
+       margin-right: 2em;
+     }
+     div.wrapper section.four div#all_img img.big1 {
+       display: inline-block;
+       height: 364px;
+       float: right;
+       margin-right: 2em;
+     }
+     div.wrapper section.four  button {
+  position:  relative;
+  left: 38%;
+  margin: 0em;
+}
+     
+     div.wrapper section.five div article#circus {
+  margin-left: 15%;
+}
+div.wrapper section.five div article#cake {
+  margin-left: 15%;
+  float: none;
+}
+     div.wrapper section.five div#best {
+       width: 100%;
+     }
+     div.wrapper section.five ul{
+       width: 10%;
+       left: 46%;
+     }
+     div.wrapper section.six article:first-of-type div#set p {
+       height: auto;
+       margin-top: 2em;
+       width: 90%;
+       text-align: justify;
+     }
+     div.wrapper section.six article:last-of-type img {
+       margin-left: 11%;
+     }
+     div.wrapper section.six ul {
+       width: 10%;
+       left: 45%;
+     }
+     div.wrapper footer div#contact ul:first-of-type li {
+       width: 100%;
+     }
+     div.wrapper footer div#contact {
+       margin-bottom: 2em;
+       margin-left: 0em;
+       width: 100%;
+     }
+     div.wrapper  footer  div#calendar {
+       margin-left: 14em;
+     }
+   }
+
+   @media all and (max-width: 959px) {
+     div.wrapper section.four div#all_img  img.small {
+       margin-bottom: 0em;
+     }
+     div.wrapper nav ul {
+      width: 50%;
+    }
+    div.wrapper section.first article:first-of-type img {
+      margin-top:  25%;
+    }
+    div.wrapper section.first article:first-of-type {
+      height: inherit;
+    }
+    div.wrapper section.second article:last-of-type img {
+     margin-top: 25%;
+   }
+   div.wrapper section.third article:first-of-type {
+    height: inherit;
+  }
+  div.wrapper section.third article:first-of-type img {
+   margin-top: 25%;
+ }
+ div.wrapper section.four div#all_img div#img_1 img.big {
+  margin-right: 0em;
+  width: 300px;
+  height: 300px;
+}
+div.wrapper section.four div#all_img div#img_1  img.small {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+div.wrapper section.four div#all_img div#img_2 img.big {
+ width: 300px;
+ height: 300px;
+ float: left;
+}
+div.wrapper section.four div#all_img  div#img_2 img.small {
+ width: 300px;
+ height: 300px;
+ float: right;
+ margin-right: 0em;
+}
+div.wrapper section.four div#all_img div#img_3 img.small1 {
+   width: 300px;
+ height: 300px;
+ float: left;
+}
+div.wrapper section.four div#all_img div#img_3 img.big1 {
+  width: 300px;
+ height: 300px;
+ margin-right: 0em;
+}
+
+div.wrapper section.five div article#circus {
+  margin-left: 5%;
+}
+div.wrapper section.five div article#cake {
+  margin-left: 5%;
+  float: none;
+}
+
+}
+
+@media all and (max-width: 760px) {
+     div.wrapper section.first {
+       	display: flex;
+     /*flex-flow:column wrap;*/
+    }
+    div.wrapper section.four div#img_1, div#img_2, div#img_3 {
+    	display: flex;
+    	width: 100%;
+    }
+     div.wrapper section.four div#img_2 {
+    	display: flex;
+    	width: 100%;
+    }
+     div.wrapper section.four div#img_3 {
+    	display: flex;
+    	width: 100%;
+    }
+
+   div.wrapper section.four div#all_img  img.small {
+   	width: 50%;
+   	margin-bottom: 0em;
+   	float: left;
+   	display: inline-block;
+   }
+   div.wrapper section.four div#all_img  img.big {
+   	float: right;
+   	display: inline-block;
+   	width: 50%;
+   }
+   div.wrapper section.four div#all_img  img.small1 {
+   	width: 50%;
+   }
+   div.wrapper section.four div#all_img  img.big1 {
+   	width: 50%;
+   }
+   div.wrapper section.six article:first-of-type div#set p {
+      height: 100px;
+      margin-top: 1em;
+   }
+   div.wrapper section.six article:last-of-type img {
+    margin-left: 6%;
+   }
+   div.wrapper section.six ul {
+    width: 11%;
+   }
+   div.wrapper  footer  div#calendar {
+     margin-left: 8em;
+   }
+}
+@media all and (max-width: 750px) {
+  div.wrapper section.five div article#circus {
+    margin-left: 1%;
+  }
+  div.wrapper section.five div article#cake {
+     margin-left: 1%;
+  }
+}

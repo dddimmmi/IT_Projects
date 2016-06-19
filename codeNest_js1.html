@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  #container {
+	  	 width: 600px;
+	  	 height: 400px;
+	  	 margin: 0 auto;
+	  	 border: 3px solid #000;
+	  	 position: relative;
+	  }
+	  #cont {
+	  	 width: 600px;
+	  	 height: 400px;
+	  	 overflow: hidden;
+	  	display: flex;
+	  }
+	 
+
+	   #img {
+	   	 width: 600px;
+	  	 height: 400px;
+	  	 position: absolute;
+	  	 display: inline-block;
+	  	/* -webkit-animation: mymove 5s infinite;
+	  	 animation: mymove 5s infinite;*/
+
+	   }
+	   .slide-text {
+	   	 color: #f2f2f2;
+         font-size: 15px;
+         padding: 8px 12px;
+         position: absolute;
+         bottom: 50%;
+         width: 100%;
+         text-align: center;
+	   }
+	   .fade {
+          -webkit-animation-name: fade;
+  animation-name: fade;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+	  /* @-webkit-keyframes mymove {
+	   	from {top: 0%;}
+	   	to{top: 50%;}
+	   }
+	     @keyframes mymove {
+	   	from {top: 0%;}
+	   	to{top: 50%;}
+	   }*/
+	  /* #img*/
+	   #left_holder {
+	   	 width: 50px;
+	  	 height: 400px;
+	  	 position: absolute;
+	  	 left: 0px;
+	  	 top: 0px;
+	  	 /*border: 1px solid blue;*/
+	   }
+	   #left_holder a.prev {
+	   	display: block;
+	   	position: absolute;
+	   	width: 50px;
+	   	height:50px;
+	   	top: 0%;
+	   	bottom: 0%;
+	   	left: 0%;
+	   	margin: auto;
+	   	background-image: url('img/slide-arrow.png');
+	  	background-position:5px 151px; 
+	   }
+	   #right_holder {
+	   	 width: 50px;
+	  	 height: 400px;
+	  	 position: absolute;
+         right: 0px;
+         top:0px;
+        /* border: 1px solid blue;*/
+	   }
+	   #right_holder a.next {
+	   	display: block;
+	   	position: absolute;
+	   	top:0%;
+	   	right:0%;
+	    bottom: 0%;
+	   	margin: auto;/*с тези 4-ри ф-ции top:0%; right:0%; bottom: 0%; margin: auto; се центрира снимката по средата по вертикала*/
+	   	width: 50px;
+	   	height: 50px;
+	   	  background-image: url('img/slide-arrow.png');
+	  	 background-position:46px 151px; 
+	   }
+	</style>
+	<script>
+	var Images = new Array("img/pic1.jpg", "img/pic2.jpg","img/pic3.jpg","img/pic4.jpg");
+	
+	var img_num =0;
+	var img_len = Images.length -1;
+
+	function slide(num){
+		img_num = img_num + num;
+		if(img_num > img_len){
+
+			img_num = 0;
+		}
+		if(img_num < 0){
+			img_num = img_len;
+		}
+		img.src= Images[img_num];
+		return false;
+	}
+	/////////////////////////////
+/*var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+   
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+   
+    slides[slideIndex-1].style.display = "block";
+    
+   // setTimeout(showSlides, 3000); // Change image every 2 seconds
+}*/
+    /////////////////////////////
+     window.setInterval(function slideA() {
+        	var Images = new Array("img/pic1.jpg", "img/pic2.jpg","img/pic3.jpg","img/pic4.jpg");
+
+         img_num = img_num +1;
+		if(img_num > img_len){
+
+			img_num = 0;
+		}
+		if(img_num < 0){
+			img_num = img_len;
+		}
+            img.src = Images[img_num];
+         
+
+	 },3000);
+	</script>
+</head>
+<body onclick="slideA()">
+	<div id="container">
+		<div id="cont">
+		<div class="mySlides fade">
+			<img id="img" src="img/pic1.jpg" alt="no">
+		</div>
+		<div class="mySlides fade">
+			<img id="img1" src="img/pic2.jpg" alt="no">
+		</div>
+		<div class="mySlides fade">
+		<img id="img2" src="img/pic3.jpg" alt="no">
+	</div>
+		<div class="mySlides fade">
+			<img id="img3" src="img/pic4.jpg" alt="no">
+		</div>
+		</div>
+	
+		<div id="left_holder">
+			<a onclick="slide(-1);" href="#" class="prev" id="btn1"></a>
+		</div>
+		<div id="right_holder"><a onclick="slide(1);" href="#" id="btn" class="next"></a></div>
+	</div>
+</body>
+</html>
